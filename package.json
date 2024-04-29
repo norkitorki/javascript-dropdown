@@ -2,8 +2,9 @@
   "name": "dropdown-menu",
   "version": "1.0.0",
   "description": "Customizable dropdown menu",
-  "main": "script.js",
-  "scripts": {},
+  "scripts": {
+    "watch": "webpack --watch"
+  },
   "author": "",
   "license": "ISC",
   "devDependencies": {
