@@ -1,6 +1,11 @@
 export function dropdown(
   menuNode,
-  type = { click: false, focus: false, hover: false }
+  options = {
+    click: false,
+    focus: false,
+    hover: false,
+    retractAfterClick: false,
+  },
 ) {
   const trigger = menuNode.querySelector('.trigger');
   const menu = menuNode.querySelector('.menu');
