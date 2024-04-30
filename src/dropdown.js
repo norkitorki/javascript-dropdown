@@ -18,8 +18,10 @@ export function dropdown(
     options = { toggle: false }
   ) => {
     if (options.toggle) {
-      trigger.addEventListener(addEvent, () => {
+      trigger.addEventListener(addEvent, (event) => {
+        if (event.target === trigger) {
         menu.classList.toggle(extendedClazz);
+        }
       });
     } else {
       trigger.addEventListener(addEvent, () => {
