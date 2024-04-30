@@ -36,7 +36,7 @@ export function dropdown(
 
   if (options.retractAfterClick) {
     Array.from(menu.children).forEach((item) => {
-      item.addEventListener('click', (event) => {
+      item.addEventListener('click', () => {
         menu.classList.remove(extendedClazz);
       });
     });
