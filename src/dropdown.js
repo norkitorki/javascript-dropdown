@@ -36,6 +36,6 @@ export function dropdown(
   }
 
   if (type.hover) {
-    handleMenuExtend('mouseover', 'mouseleave');
+    handleMenuExtend('mouseenter', 'mouseleave');
   }
 }
