@@ -20,7 +20,7 @@ export function dropdown(
     if (options.toggle) {
       trigger.addEventListener(addEvent, (event) => {
         if (event.target === trigger) {
-        menu.classList.toggle(extendedClazz);
+          menu.classList.toggle(extendedClazz);
         }
       });
     } else {
@@ -33,6 +33,14 @@ export function dropdown(
       });
     }
   };
+
+  if (options.retractAfterClick) {
+    Array.from(menu.children).forEach((item) => {
+      item.addEventListener('click', (event) => {
+        menu.classList.remove(extendedClazz);
+      });
+    });
+  }
 
   if (options.click) {
     handleMenuExtend('click', null, { toggle: true });
