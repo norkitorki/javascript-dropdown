@@ -34,15 +34,15 @@ export function dropdown(
     }
   };
 
-  if (type.click) {
+  if (options.click) {
     handleMenuExtend('click', null, { toggle: true });
   }
 
-  if (type.focus) {
+  if (options.focus) {
     handleMenuExtend('focusin', 'focusout');
   }
 
-  if (type.hover) {
+  if (options.hover) {
     handleMenuExtend('mouseenter', 'mouseleave');
   }
 }
