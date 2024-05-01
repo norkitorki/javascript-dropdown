@@ -31,3 +31,20 @@ const myMenu = document.querySelector('.myMenu');
 
 dropdown(myMenu, { click: true, retractAfterClick: true });
 ```
+
+## Options
+
+The following arguments can be passed to the options hash:
+
+```
+click: true || false # Defines whether the menu extends when clicked
+focus: true || false # Defines whether the menu extends when focused
+hover: true || false # Defines whether the menu extends when hovered
+retractAfterClick: true || false # When true, minimizes the menu after an item inside the menu has been clicked 
+```
+
+It's also possible to pass in multiple options to trigger the same menu. For example, the following menu would extennd when user clicks or focuses on the trigger:
+
+```javascript
+dropdown(someMenu, { click: true, focus: true });
+```
