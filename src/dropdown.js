@@ -1,3 +1,5 @@
+import * as css from './style.css';
+
 export function dropdown(
   menuNode,
   options = {
