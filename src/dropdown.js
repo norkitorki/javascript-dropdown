@@ -1,5 +1,12 @@
 import * as css from './style.css';
 
+function toggleExpanded(trigger) {
+  const attrName = 'aria-expanded';
+  const attrValue = trigger.getAttribute(attrName);
+
+  trigger.setAttribute(attrName, attrValue === 'true' ? 'false' : 'true');
+}
+
 export function dropdown(
   menuNode,
   options = {
@@ -7,12 +14,14 @@ export function dropdown(
     focus: false,
     hover: false,
     retractAfterClick: false,
-  },
+  }
 ) {
   const trigger = menuNode.querySelector('.trigger');
   const menu = menuNode.querySelector('.menu');
 
   const extendedClazz = 'menuExtended';
+
+  trigger.setAttribute('aria-expanded', 'false');
 
   const handleMenuExtend = (
     addEvent,
@@ -23,15 +32,18 @@ export function dropdown(
       trigger.addEventListener(addEvent, (event) => {
         if (event.target === trigger) {
           menu.classList.toggle(extendedClazz);
+          toggleExpanded(trigger);
         }
       });
     } else {
       trigger.addEventListener(addEvent, () => {
         menu.classList.add(extendedClazz);
+        toggleExpanded(trigger);
       });
 
       trigger.addEventListener(removeEvent, () => {
         menu.classList.remove(extendedClazz);
+        toggleExpanded(trigger);
       });
     }
   };
