@@ -14,7 +14,7 @@
   transition: all 0.8s ease-in-out;
 }
 
-.menu.menuExtended {
+.menuExtended {
   top: 100%;
   z-index: 1;
   visibility: visible;
