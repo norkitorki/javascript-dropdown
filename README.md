@@ -4,6 +4,8 @@ A very basic customizable dropdown menu implementation.
 
 ## Usage
 
+Add the contents of dropdown.js and dropdown.css to your code
+
 ### html
 
 ```html
@@ -25,8 +27,6 @@ A very basic customizable dropdown menu implementation.
 ### javascript
 
 ```javascript
-import { dropdown } from './dropdown';
-
 const myMenu = document.querySelector('.myMenu');
 
 dropdown(myMenu, { click: true, retractAfterClick: true });
@@ -37,10 +37,10 @@ dropdown(myMenu, { click: true, retractAfterClick: true });
 The following arguments can be passed to the options hash:
 
 ```
-click: true || false # Defines whether the menu extends when clicked
-focus: true || false # Defines whether the menu extends when focused
-hover: true || false # Defines whether the menu extends when hovered
-retractAfterClick: true || false # When true, minimizes the menu after an item inside the menu has been clicked 
+click: true || false # Menu expands when clicked
+focus: true || false # Menu expands when focused
+hover: true || false # Menu expands when hovered
+retractAfterClick: true || false # Closes the menu when a menu item has been clicked
 ```
 
 It's also possible to pass in multiple options to trigger the same menu. For example, the following menu would extennd when user clicks or focuses on the trigger:
