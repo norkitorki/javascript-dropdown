@@ -5,7 +5,7 @@ function toggleExpanded(trigger) {
   trigger.setAttribute(attrName, attrValue === 'true' ? 'false' : 'true');
 }
 
-export function dropdown(
+function dropdown(
   menuNode,
   options = {
     click: false,
