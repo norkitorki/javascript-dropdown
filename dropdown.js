@@ -1,5 +1,3 @@
-import * as css from './style.css';
-
 function toggleExpanded(trigger) {
   const attrName = 'aria-expanded';
   const attrValue = trigger.getAttribute(attrName);
